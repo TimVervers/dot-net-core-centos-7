@@ -13,8 +13,9 @@ namespace aspnetcoreapp
                 
             var host = new WebHostBuilder()
                 .UseKestrel()
-                .UseStartup<Startup>()
+                .UseContentRoot(Directory.GetCurrentDirectory())
                 .UseConfiguration(configuration)
+                .UseStartup<Startup>()
                 .Build();
 
             host.Run();
