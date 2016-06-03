@@ -24,4 +24,4 @@ Install .NET Core for OXS based on https://www.microsoft.com/net/core#macosx
 
 # Running the app
 - `dotnet restore`
-- `dotnet run`
+- `dotnet run --server.urls=http://localhost:5000/` (You can specify all hostnames/ips/ports)
