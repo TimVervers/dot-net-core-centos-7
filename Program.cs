@@ -7,10 +7,14 @@ namespace aspnetcoreapp
     {
         public static void Main(string[] args)
         {
+            var configuration = new ConfigurationBuilder()
+                .AddCommandLine(args)
+                .Build();
+                
             var host = new WebHostBuilder()
                 .UseKestrel()
                 .UseStartup<Startup>()
-                .UseUrls("http://192.168.249.11:80/")
+                .UseConfiguration(configuration)
                 .Build();
 
             host.Run();
